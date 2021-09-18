@@ -4,6 +4,8 @@ import com.curiousgeek.curiousgeekblog.model.Role;
 import com.curiousgeek.curiousgeekblog.model.User;
 import com.curiousgeek.curiousgeekblog.repository.UserRepository;
 import com.curiousgeek.curiousgeekblog.web.dto.UserRegistrationDto;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -27,4 +29,8 @@ public class UserServiceImpl implements UserService{
         return userRepository.save(user);
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
 }
