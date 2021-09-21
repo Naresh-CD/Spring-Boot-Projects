@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="ISO-8859-1">
     <title>Registration</title>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- create navigation bar ( header) -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" th:href="@{/}"> Welcome to Curious Geek Blog
-                 </a>
-        </div>
-    </div>
+<!--Centered Navbar for header-->
+<nav class="navbar navbar-dark bg-dark navbar-right ">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="navbar-brand" href="#" th:href="@{/}">Curious Geek Blog </a>
+        </li>
+    </ul>
 </nav>
-
-<br>
 <br>
 <!-- Create HTML registration form -->
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 offset-lg-3">
 
             <!-- success message -->
             <div th:if="${param.success}">
@@ -47,9 +39,7 @@
                     <label class="control-label" for="firstName"> First Name </label>
                     <input id="firstName" class="form-control" th:field="*{firstName}"
                            required autofocus="autofocus"/>
-                </div>
 
-                <div class="form-group">
                     <label class="control-label" for="lastName"> Last Name </label> <input
                         id="lastName" class="form-control" th:field="*{lastName}"
                         required autofocus="autofocus"/>
@@ -68,12 +58,16 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success">Register</button>
+                    <button type="submit" class="form control btn btn-primary">Register</button>
                     <span>Already registered? <a href="/" th:href="@{/login}">Login
 								here</a></span>
                 </div>
             </form>
         </div>
+<!--Navbar Sticky Footer-->
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <a class="navbar-brand mx-auto" href="#">© 2021 Copyright</a>
+        </nav>
     </div>
 </div>
 </body>
