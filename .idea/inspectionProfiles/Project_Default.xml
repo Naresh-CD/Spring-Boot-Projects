@@ -6,8 +6,9 @@
       <option name="myIgnoreVendorSpecificProperties" value="false" />
       <option name="myCustomPropertiesList">
         <value>
-          <list size="1">
+          <list size="2">
             <item index="0" class="java.lang.String" itemvalue="maxwidth" />
+            <item index="1" class="java.lang.String" itemvalue="filter" />
           </list>
         </value>
       </option>
@@ -20,11 +21,13 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="4">
+          <list size="6">
             <item index="0" class="java.lang.String" itemvalue="sec:authorize" />
             <item index="1" class="java.lang.String" itemvalue="logout" />
             <item index="2" class="java.lang.String" itemvalue="sec:authentication" />
             <item index="3" class="java.lang.String" itemvalue="method" />
+            <item index="4" class="java.lang.String" itemvalue="alert" />
+            <item index="5" class="java.lang.String" itemvalue="color" />
           </list>
         </value>
       </option>
@@ -33,7 +36,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="12">
+          <list size="14">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -46,6 +49,8 @@
             <item index="9" class="java.lang.String" itemvalue="body" />
             <item index="10" class="java.lang.String" itemvalue="head" />
             <item index="11" class="java.lang.String" itemvalue="lang" />
+            <item index="12" class="java.lang.String" itemvalue="img" />
+            <item index="13" class="java.lang.String" itemvalue="nav" />
           </list>
         </value>
       </option>
