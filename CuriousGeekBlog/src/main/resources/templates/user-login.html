@@ -67,8 +67,8 @@
 				<div class="col-md-5 col-md-offset-5">
 					<!-- error message -->
 					<div th:if="${param.error}">
-						<div class="alert alert-danger alert-dismissible fade show" role="alert">
-							Invalid email address or password.
+						<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi-exclamation-triangle-fill"></i>
+							<strong class="mx-2">Error!</strong>Invalid email address or password.
 							<button type="button" class="close" data-dismiss="alert" aria-label="close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -76,7 +76,13 @@
 					</div>
 					<!-- logout message -->
 					<div th:if="${param.logout}">
-						<div class="alert alert-success">You have been logged out.</div>
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+							<i class="bi-check-circle-fill"></i>
+							<strong class="mx-2">Success!</strong>You have been logged out.
+							<button type="button" class="close" data-dismiss="alert" aria-label="close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
 					</div>
 					<div class="border p-3 mb-auto rounded shadow p-3 mb-auto bg-white rounded">
 						<h1 class="text-center" style="font-size: 30px">Login</h1>
@@ -107,7 +113,7 @@
 				</div>
 				<!--Navbar fixed Footer-->
 				<nav class="navbar fixed-bottom navbar-dark bg-dark">
-					<a style="color: white" class="navbar-brand mx-auto">© 2021 Copyright</a>
+					<a style="color: white; font-size: 15px" class="navbar-brand mx-auto">© 2021 Copyright</a>
 				</nav>
 			</div>
 		</div>
