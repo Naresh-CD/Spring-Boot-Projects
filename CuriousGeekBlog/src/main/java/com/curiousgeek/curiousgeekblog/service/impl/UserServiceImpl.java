@@ -1,8 +1,9 @@
-package com.curiousgeek.curiousgeekblog.service;
+package com.curiousgeek.curiousgeekblog.service.impl;
 
 import com.curiousgeek.curiousgeekblog.model.Role;
 import com.curiousgeek.curiousgeekblog.model.User;
 import com.curiousgeek.curiousgeekblog.repository.UserRepository;
+import com.curiousgeek.curiousgeekblog.service.UserService;
 import com.curiousgeek.curiousgeekblog.web.dto.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,7 +18,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 

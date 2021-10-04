@@ -1,7 +1,15 @@
 package com.curiousgeek.curiousgeekblog.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "role")
 public class Role {
@@ -15,25 +23,4 @@ public class Role {
     public Role(String name) {
         this.name = name;
     }
-
-    public Role() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }

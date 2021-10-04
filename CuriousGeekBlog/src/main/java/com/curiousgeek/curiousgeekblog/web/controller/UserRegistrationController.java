@@ -1,4 +1,4 @@
-package com.curiousgeek.curiousgeekblog.web;
+package com.curiousgeek.curiousgeekblog.web.controller;
 
 import com.curiousgeek.curiousgeekblog.service.UserService;
 import com.curiousgeek.curiousgeekblog.web.dto.UserRegistrationDto;
