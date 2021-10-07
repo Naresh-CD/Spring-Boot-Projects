@@ -1,5 +1,6 @@
 package com.curiousgeek.curiousgeekblog.service.impl;
 
+import com.curiousgeek.curiousgeekblog.exception.ResourceNotFoundException;
 import com.curiousgeek.curiousgeekblog.model.Post;
 import com.curiousgeek.curiousgeekblog.repository.PostRepository;
 import com.curiousgeek.curiousgeekblog.service.PostService;
@@ -38,6 +39,34 @@ public class PostServiceImpl implements PostService {
     public List<PostDto> getAllPosts() {
         List<Post> posts = postRepository.findAll();
         return posts.stream().map(post -> mapToDto(post)).collect(Collectors.toList());
+    }
+
+    // To get posts by id
+    @Override
+    public PostDto getPostById(long id) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+        return mapToDto(post);
+    }
+
+    // To update posts
+    @Override
+    public PostDto updatePost(PostDto postDto, long id) {
+        // get post by id from the database
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+        post.setTitle(postDto.getTitle());
+        post.setContent(postDto.getContent());
+        post.setDescription(postDto.getDescription());
+
+        Post updatedPost = postRepository.save(post);
+        return mapToDto(updatedPost);
+    }
+
+    // To delete post by id
+    @Override
+    public void deletePostById(long id) {
+        // get post by id from the database
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+        postRepository.delete(post);
     }
 
     // Convert entity into DTO
