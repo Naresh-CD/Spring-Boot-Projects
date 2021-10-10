@@ -8,13 +8,34 @@
 }
 
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     /*padding: 10px;*/
     overflow: hidden;
     /*background: linear-gradient(#b77ad5, #76bdec);*/
+    background-image: url("/static/images/coding.gif");
+    background-repeat: no-repeat, repeat;
+    background-position: left;
+    background-attachment: fixed;
+    height: 500px;
+    width: 500px;
 }
+
+.justify-content-center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    bottom: 0;
+    right: 0;
+}
+
+.justify-content-center {
+    min-width: 300px;
+    max-width: 500px;
+    padding: 50px;
+}
+
 
 

@@ -21,7 +21,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="7">
+          <list size="8">
             <item index="0" class="java.lang.String" itemvalue="sec:authorize" />
             <item index="1" class="java.lang.String" itemvalue="logout" />
             <item index="2" class="java.lang.String" itemvalue="sec:authentication" />
@@ -29,6 +29,7 @@
             <item index="4" class="java.lang.String" itemvalue="alert" />
             <item index="5" class="java.lang.String" itemvalue="color" />
             <item index="6" class="java.lang.String" itemvalue="rounded-circle" />
+            <item index="7" class="java.lang.String" itemvalue="th:fragment" />
           </list>
         </value>
       </option>
@@ -37,7 +38,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="17">
+          <list size="18">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -55,6 +56,7 @@
             <item index="14" class="java.lang.String" itemvalue="fixed-bottom" />
             <item index="15" class="java.lang.String" itemvalue="navbar-dark" />
             <item index="16" class="java.lang.String" itemvalue="bg-dark" />
+            <item index="17" class="java.lang.String" itemvalue="html" />
           </list>
         </value>
       </option>

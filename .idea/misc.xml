@@ -8,6 +8,7 @@
     </option>
   </component>
   <component name="ProjectResources">
+    <resource url="http://www.ultraq.net.nz/thymeleaf/layout" location="$PROJECT_DIR$/CuriousGeekBlog/src/main/resources/templates/layout.html" />
     <resource url="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap" location="$PROJECT_DIR$/CuriousGeekBlog/src/main/resources/static/css/user-login.css" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
