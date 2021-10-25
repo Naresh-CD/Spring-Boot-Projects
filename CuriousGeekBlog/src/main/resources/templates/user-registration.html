@@ -1,78 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-			xmlns:th="http://www.thymeleaf.org"
-			xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-			layout:decorate="~{layout}">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
 <head>
 	<!-- Thymeleaf links -->
-	<link rel="stylesheet" type="text/css" th:href="@{/static/css/user-registration.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/static/css/user-registration.css}" />
 	<title>User Registration form</title>
 </head>
+
 <body>
-<div layout:fragment="content">
-	<div class="container">
-		<div class="d-flex justify-content-center align-items-center">
-			<div class="col-md-12 col-md-offset-12">
-				<br>
-				<!-- success message -->
-				<div th:if="${param.success}">
-					<div class="alert alert-success alert-dismissible fade show" role="alert">
-						<i class="bi-check-circle-fill"></i>
-						<strong class="mx-2">Success!</strong>You've successfully registered to our blog!
-						<button type="button" class="close" data-dismiss="alert" aria-label="close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+	<div layout:fragment="content">
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center">
+				<div class="col-md-12 col-md-offset-12">
+					<br />
+					<!-- success message -->
+					<div th:if="${param.success}">
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+							<i class="bi-check-circle-fill"></i>
+							<strong class="mx-2">Success!</strong>You've successfully registered to our blog!
+							<button type="button" class="close" data-dismiss="alert" aria-label="close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
 					</div>
-				</div>
-				<div class="border p-3 mb-auto rounded shadow p-3 mb-auto bg-white rounded">
-					<h1 class="text-center" style="font-size: 30px">Registration</h1>
-					<p class="text-center">It's quick and easy.</p>
-					<h2 class="border-bottom mb-2 pb-1"></h2>
-					<form th:action="@{/registration}" method="post" th:object="${user}">
-						<div class="form-group">
-							<label class="control-label" for="firstName"> First Name </label>
-							<input
-											id="firstName"
-											class="form-control"
-											th:field="*{firstName}"
-											required
-											autofocus="autofocus"
-											placeholder="Enter your first name"
-							/>
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="lastName"> Last Name </label>
-							<input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus"
-										 placeholder="Enter your last name"/>
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="email"> Email Address </label>
-							<input id="email" class="form-control" th:field="*{email}" required autofocus="autofocus"
-										 placeholder="Enter your email address"/>
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="password"> Password </label>
-							<input
-											id="password"
-											class="form-control"
-											type="password"
-											th:field="*{password}"
-											required
-											autofocus="autofocus"
-											placeholder="Enter your password"
-							/>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="form-control btn btn-md btn-primary col-md-12 text-center">Register</button>
-						</div>
-						<div class="form-group">
-							<span>Already registered? <a href="/" th:href="@{/login}">Login here</a></span>
-						</div>
-					</form>
+					<div class="border p-3 mb-auto rounded shadow p-3 mb-auto bg-white rounded">
+						<h1 class="text-center" style="font-size: 30px">Registration</h1>
+						<p class="text-center">It's quick and easy.</p>
+						<h2 class="border-bottom mb-2 pb-1"></h2>
+						<form th:action="@{/registration}" method="post" th:object="${user}">
+							<div class="form-group">
+								<label class="control-label" for="firstName"> First Name </label>
+								<input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus"
+									placeholder="Enter your first name" />
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="lastName"> Last Name </label>
+								<input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus"
+									placeholder="Enter your last name" />
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="email"> Email Address </label>
+								<input id="email" class="form-control" th:field="*{email}" required autofocus="autofocus"
+									placeholder="Enter your email address" />
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="password"> Password </label>
+								<input id="password" class="form-control" type="password" th:field="*{password}" required
+									autofocus="autofocus" placeholder="Enter your password" />
+							</div>
+							<div class="form-group">
+								<button type="submit"
+									class="form-control btn btn-md btn-primary col-md-12 text-center">Register</button>
+							</div>
+							<div class="form-group">
+								<span>Already registered? <a href="/" th:href="@{/login}">Login here</a></span>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </body>
+
 </html>

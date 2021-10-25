@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 public class PostServiceImpl implements PostService {
 
-    private PostRepository postRepository;
+    private final PostRepository postRepository;
 
     @Autowired
     public PostServiceImpl(PostRepository postRepository) {
@@ -79,7 +79,7 @@ public class PostServiceImpl implements PostService {
         return postDto;
     }
 
-    // Converted DTO to entity
+    // Convert DTO into entity
     private Post mapToEntity(PostDto postDto) {
         Post post = new Post();
         post.setTitle(postDto.getTitle());
